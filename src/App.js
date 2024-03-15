@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import { useState } from 'react';
+import { useState } from "react";
+import axios from "axios";
+
 
 function App() {
   const [title,setTitle] = useState("");
@@ -11,6 +13,12 @@ function App() {
     formData.append("title",title);
     formData.append("file",file);
     console.log(title,file);
+    const result = await axios.post("http://localhost:5000/upload-files",
+    formData,
+    {
+      headers :{"Content-Type":"multipart/form-data"},
+    });
+    console.log(result);
   }
   return (
     <div className="App">
