@@ -4,20 +4,24 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <form className='formStyle'>
+        <h4>PDF MASTER</h4>
+        <br/>
+        <input
+        type='text'
+        className='form-control'
+        placeholder='Title'
+        required 
+        />
+        <br/>
+         <input
+        type='file'
+        className='form-control'
+        accept='appliaction/pdf'
+        required 
+        />
+        <br/>
+      </form>
     </div>
   );
 }
