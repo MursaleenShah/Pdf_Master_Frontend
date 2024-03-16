@@ -1,12 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 
 function App() {
   const [title,setTitle] = useState("");
   const [file, setFile] = useState("");
+  const [allImage,setAllImage] = useState(null);
+
+  useEffect(()=>{
+    getPdf();
+  },[]);
+
+//function to get pdf from server
+const getPdf = async() =>{
+  const result = await axios.get("http://localhost:5000/get-files");
+  console.log(result.data.data);
+  setAllImage(result.data.data);
+
+}
+
+
+
   const submitImage = async(e)=>{
     e.preventDefault();
     const formData = new FormData();
@@ -19,6 +35,9 @@ function App() {
       headers :{"Content-Type":"multipart/form-data"},
     });
     console.log(result);
+     if(result.data.status == "ok"){
+      alert("uploaded successfully!");
+     }
   }
   return (
     <div className="App">
@@ -46,6 +65,23 @@ function App() {
           Submit
         </button>
       </form>
+      <div className='uploaded'>
+        <h4>Uploaded PDF:</h4>
+        <div className='output-div'>
+          {allImage == null 
+          ? "" 
+          : allImage.map((data)=>{
+            return(
+              <div className='inner-div'>
+            <h6>Title:{data.title}</h6>
+            <button className='btn btn-primary'>Show Pdf</button>
+          </div>
+            );
+          })
+          }
+        </div>
+
+      </div>
     </div>
   );
 }
