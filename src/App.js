@@ -15,6 +15,8 @@ function App() {
   const [file, setFile] = useState("");
   const [allImage, setAllImage] = useState(null);
   const [pdfFile, setPdfFile] = useState(null);
+  //state to store page numbers for extraction
+  const [pageNumbers, setPageNumbers] = useState("");
 
   useEffect(() => {
     getPdf();
@@ -39,7 +41,8 @@ function App() {
     const formData = new FormData();
     formData.append("title", title);
     formData.append("file", file);
-    console.log(title, file);
+    formData.append("pageNumbers",pageNumbers)
+    console.log(title, file,pageNumbers);
     const result = await axios.post(
       "http://localhost:5000/upload-files",
       formData,
@@ -78,6 +81,14 @@ function App() {
           onChange={(e) => setFile(e.target.files[0])}
         />
         <br />
+        <input
+          type="text"
+          className="form-control"
+          placeholder="Page Numbers to Extract (e.g., 1, 3, 5-7)"
+          onChange={(e) => setPageNumbers(e.target.value)}
+        />
+        <br />
+
         <button className="btn btn-primary" type="submit">
           Submit
         </button>
