@@ -14,7 +14,7 @@ function App() {
   const [title, setTitle] = useState("");
   const [file, setFile] = useState("");
   const [allImage, setAllImage] = useState(null);
-  const [pdfFile,setPdfFile] =useState(null);
+  const [pdfFile, setPdfFile] = useState(null);
 
   useEffect(() => {
     getPdf();
@@ -29,6 +29,13 @@ function App() {
 
   const submitImage = async (e) => {
     e.preventDefault();
+ 
+    // Check if file is not null and is a PDF
+    if (file && file.type !== "application/pdf") {
+      alert("Please select only PDF files.");
+      return;
+    }
+
     const formData = new FormData();
     formData.append("title", title);
     formData.append("file", file);
@@ -48,7 +55,7 @@ function App() {
   };
   //function to show pdf on homepage
   const showPdf = (pdf) => {
-    setPdfFile(`http://localhost:5000/files/${pdf}`)
+    setPdfFile(`http://localhost:5000/files/${pdf}`);
   };
   return (
     <div className="App">
@@ -95,7 +102,7 @@ function App() {
               })}
         </div>
       </div>
-      <PdfComp  pdfFile ={pdfFile}/>
+      <PdfComp pdfFile={pdfFile} />
     </div>
   );
 }
