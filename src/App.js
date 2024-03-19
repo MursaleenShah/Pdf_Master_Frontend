@@ -59,7 +59,39 @@ function App() {
   //function to show pdf on homepage
   const showPdf = (pdf) => {
     setPdfFile(`http://localhost:5000/files/${pdf}`);
+  }
+  //function to download modified pdf
+  const downloadModifiedPdf = async (pdfId) => {
+    try {
+      const response = await axios.get(`http://localhost:5000/get-modified-pdf/${pdfId}`, {
+        responseType: 'blob'
+      });
+      
+      const url = window.URL.createObjectURL(new Blob([response.data]));
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', 'modified_pdf.pdf');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (error) {
+      console.error('Error downloading modified PDF:', error);
+    }
   };
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
   return (
     <div className="App">
       <form className="formStyle" onSubmit={submitImage}>
@@ -107,6 +139,11 @@ function App() {
                       onClick={() => showPdf(data.pdf)}
                     >
                       Show Pdf
+                    </button>
+                    <button className="btn btn-primary"
+                    onClick={() => downloadModifiedPdf(data._id)}>
+                      Download Pdf
+
                     </button>
                   </div>
                 );
