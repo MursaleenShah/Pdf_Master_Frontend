@@ -17,12 +17,14 @@ code {
     align-items: center;
     padding-top: 30px;
     flex-direction: column;
+    
 }
 .formStyle{
   padding: 20px;
   border: 1px solid black;
   width: 25%;
   text-align: center;
+  border-radius: 15px;
 }
 
 .form-control{
@@ -50,5 +52,8 @@ code {
 }
 canvas.react-pdf__Page__canvas {
   margin-bottom: 50px;
+}
+.btn{
+  margin-top: 5px;
 }
 
