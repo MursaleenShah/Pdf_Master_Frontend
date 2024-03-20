@@ -8,6 +8,10 @@ function PdfComp(props) {
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
   }
+  if (!props.pdfFile) {
+    // If no PDF file is uploaded, render null or an empty div
+    return null;
+  }
 
   return (
     <div className="pdf-div">
