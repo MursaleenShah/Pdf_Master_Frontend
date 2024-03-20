@@ -95,5 +95,20 @@ canvas.react-pdf__Page__canvas {
   }
 
 }
+@media(max-width:660px){
+  .formStyle {
+    max-width: 50%;
+  }
+  
+  .btn {
+    width: 50%;
+  }
+  .uploaded{
+   width: 50%;
+
+  }
+  
+
+}
 
 
