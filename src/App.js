@@ -115,7 +115,7 @@ function App() {
         <input
           type="text"
           className="form-control"
-          placeholder="Page Numbers to Extract (e.g., 1, 3, 5-7)"
+          placeholder="Page Numbers to Extract (e.g., 1, 3)"
           onChange={(e) => setPageNumbers(e.target.value)}
           value={pageNumbers}
         />

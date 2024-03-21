@@ -14,7 +14,7 @@ PDF Master Frontend is a React.js application designed to work with the PDF Mast
 
 # Features
 1. Upload PDF: Upload PDF files to the server.
-2. Extract Pages: Users can specify page numbers to extract from uploaded PDFs. The application communicates with the backend to extract the requested pages and generate a new PDF file containing only the selected pages.
+2. Extract Pages: Users can specify page numbers as a comma-separated list, such as (4,5) to indicate which pages they want to extract from uploaded PDFs. The application communicates with the backend to extract the requested pages and generate a new PDF file containing only the selected pages.
 3. View Uploaded PDFs: View a list of uploaded PDF files with their titles.
 4. Show PDF: View the content of uploaded PDF files directly in the browser.
 5. Download Modified PDFs: After extracting specific pages from a PDF, users can download the modified PDF file directly from the application. This feature enables users to save the extracted pages for offline use.

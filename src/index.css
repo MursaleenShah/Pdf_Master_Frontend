@@ -82,6 +82,10 @@ canvas.react-pdf__Page__canvas {
 
 
 @media (max-width: 1440px) {
+  .App{
+    max-width: 100%;
+    
+   }
   .formStyle {
     max-width: 100%;
   }
@@ -96,12 +100,17 @@ canvas.react-pdf__Page__canvas {
 
 }
 @media(max-width:660px){
+   .App{
+    max-width: 100%;
+    
+   }
   .formStyle {
     max-width: 50%;
   }
   
   .btn {
     width: 50%;
+    padding: 10px;
   }
   .uploaded{
    width: 50%;
