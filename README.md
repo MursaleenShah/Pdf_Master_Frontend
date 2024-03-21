@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+#                 **PDF Master Frontend**
+PDF Master Frontend is a React.js application designed to work with the PDF Master backend.It allows users to upload PDF files, specify page numbers for extraction, view uploaded PDFs, and download modified PDFs.
+[Homepage](./images/Screenshot%20(410).png)
+[File Uploaded Successfully](./images/Screenshot%20(411).png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Installation
+1. Clone this repository.
+2. Install dependencies using `npm install`.
 
-## Available Scripts
+# Usage
+1. Start the frontend application by running `npm start`.
+2. The application will run on http://localhost:3000 by default.
+3. Make sure the backend server is running on http://localhost:5000 to handle API requests.
 
-In the project directory, you can run:
+# Features
+1. Upload PDF: Upload PDF files to the server.
+2. Extract Pages: Users can specify page numbers to extract from uploaded PDFs. The application communicates with the backend to extract the requested pages and generate a new PDF file containing only the selected pages.
+3. View Uploaded PDFs: View a list of uploaded PDF files with their titles.
+4. Show PDF: View the content of uploaded PDF files directly in the browser.
+5. Download Modified PDFs: After extracting specific pages from a PDF, users can download the modified PDF file directly from the application. This feature enables users to save the extracted pages for offline use.
 
-### `npm start`
+# Dependencies
+1. React.js: JavaScript library for building user interfaces.
+2. Axios : A promise-based HTTP client for making AJAX requests to communicate with the backend server.
+3. react-pdf: React components for displaying PDF documents within the application. These components utilize pdfjs-dist under the hood to render PDF content in React applications, providing a seamless viewing experience for users.
+4. pdfjs-dist: The PDF.js library for working with PDF documents in JavaScript. This library provides core functionality for parsing, rendering, and manipulating PDF files directly within the browser.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Contributing
+Contributions to PDF Master Frontend are welcome! If you have any ideas, enhancements, or bug fixes, please open an issue or submit a pull request.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
