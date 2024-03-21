@@ -1,7 +1,7 @@
 #                 **PDF Master Frontend**
 PDF Master Frontend is a React.js application designed to work with the PDF Master backend.It allows users to upload PDF files, specify page numbers for extraction, view uploaded PDFs, and download modified PDFs.
-[Homepage](./images/Screenshot%20(410).png)
-[File Uploaded Successfully](./images/Screenshot%20(411).png)
+![Homepage Screensot](./images/Screenshot%20(410).png)
+![File Uploaded Successfully Screenshot](./images/Screenshot%20(411).png)
 
 # Installation
 1. Clone this repository.
